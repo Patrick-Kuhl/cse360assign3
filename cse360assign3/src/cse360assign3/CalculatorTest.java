@@ -59,7 +59,11 @@ public class CalculatorTest {
 	@Test
 	public void getHistoryTest() {
 		Calculator calc = new Calculator();
-		assertTrue("" == calc.getHistory());
+		calc.add(1);
+		calc.subtract(2);
+		calc.multiply(4);
+		calc.divide(2);
+		assertTrue("0 + 1 - 2 * 4 / 2".equals(calc.getHistory()));
 	}
 
 }
